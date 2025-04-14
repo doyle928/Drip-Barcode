@@ -5,5 +5,5 @@ JsBarcode("#canvas", "E0000002", {
     width: 2,
     height: screen.height,
     displayValue: false,
-    margin: 30
+    margin: 0
   });

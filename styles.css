@@ -1,40 +1,98 @@
-*{
+* {
     overflow: hidden;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
-div {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: relative;
+
+body {
+    margin: 0;
 }
-#header{
-    background-color: #0065ac;
-    width: 100%;
+
+@media screen and (orientation: portrait) {
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    #header {
+        background-color: #0065ac;
+        width: 100%;
+    }
+
+    img {
+        padding: 10px 0;
+        display: block;
+        margin: auto;
+        height: 3rem;
+    }
+    #canvas {
+        margin: 20px 0;
+        width: 70%;
+    }
+    #footer {
+        background-color: white;
+        height: 5rem;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        transform: translateY(50%);
+    }
+
+    #footer>p {
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+        margin: 7px 0;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 }
-img {
-    padding: 20px 0;
-    display: block;
-    margin: auto;
-    height: 8rem;
-}
-#footer{
-    background-color: white;
-    height: 20rem;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 100;
-    transform: translateY(50%);
-}
-#footer > p {
-    width: 100%;
-    font-size: 3em;
-    text-align: center;
-    margin: 10px 0;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+@media screen and (orientation: landscape) {
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #header {
+        background-color: #0065ac;
+        width: 100%;
+    }
+    img {
+        padding: 8px 0;
+        display: block;
+        margin: auto;
+        height: 3rem;
+    }
+    #canvas {
+        margin: 20px 0;
+        width: 40%;
+    }
+    #footer {
+        background-color: white;
+        height: 5rem;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        transform: translateY(50%);
+    }
+
+    #footer>p {
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+        margin: 7px 0;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
 }
